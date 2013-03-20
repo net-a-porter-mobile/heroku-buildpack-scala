@@ -153,7 +153,8 @@ fi
 
 # Drop test things from the .ivy cache
 if [ -d $SBT_USER_HOME/.ivy2 ] ; then
-  echo "-----> Dropping ivy cache from the slug"
-  rm -rf $SBT_USER_HOME/.ivy2
+  echo "-----> Dropping unrequired packages from ivy cache in the slug"
+  rm -rf $SBT_USER_HOME/.ivy2/cache/org.scalatest
+  rm -rf $SBT_USER_HOME/.ivy2/cache/org.specs2
 fi
 
