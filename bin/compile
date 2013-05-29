@@ -56,14 +56,14 @@ SBT_BINDIR="$SBT_USER_HOME"/bin
 cd $BUILD_DIR
 
 # unpack cache
-CACHED_DIRS="$SBT_USER_HOME/.ivy2 $SBT_BINDIR"
-for DIR in $CACHED_DIRS; do
-  rm -rf $DIR
-  if [ -d $CACHE_DIR/$DIR ]; then
-    mkdir -p $DIR
-    cp -r $CACHE_DIR/$DIR/.  $DIR
-  fi
-done
+#CACHED_DIRS="$SBT_USER_HOME/.ivy2 $SBT_BINDIR"
+#for DIR in $CACHED_DIRS; do
+#  rm -rf $DIR
+#  if [ -d $CACHE_DIR/$DIR ]; then
+#    mkdir -p $DIR
+#    cp -r $CACHE_DIR/$DIR/.  $DIR
+#  fi
+#done
 
 # these are preliminary checks. actual version check happens below when attempting to download sbt boot.properties
 if ! test -e project/build.properties; then
