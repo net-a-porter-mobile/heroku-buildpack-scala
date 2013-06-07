@@ -43,8 +43,11 @@ SBT_BINDIR="$SBT_USER_HOME"/bin
 # chdir as sbt expects
 cd $BUILD_DIR
 
-# unpack cache
+# unpack cache. By unpack, I really mean CLOBBER
 CACHED_DIRS="$SBT_USER_HOME/.ivy2 $SBT_BINDIR"
+rm -rf $DIR
+rm -rf $SBT_USER_HOME/.ivy2
+
 #for DIR in $CACHED_DIRS; do
 #  rm -rf $DIR
 #  if [ -d $CACHE_DIR/$DIR ]; then
